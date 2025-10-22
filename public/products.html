@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cefa Temizlik - Ürünler</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html">Cefa Temizlik</a></h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="products.html">Ürünler</a></li>
+                    <li><a href="cart.html">Sepet</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                    <li><a href="login.html" id="login-btn">Giriş Yap</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-section">
+            <h2>Ürünlerimiz</h2>
+            <div class="filters">
+                <input type="text" id="search" placeholder="Ürün ara...">
+                <select id="category-filter">
+                    <option value="">Tüm Kategoriler</option>
+                    <option value="Deterjanlar">Deterjanlar</option>
+                    <option value="Süpürgeler">Süpürgeler</option>
+                    <option value="Çöp Kovaları">Çöp Kovaları</option>
+                    <option value="Çöp Poşetleri">Çöp Poşetleri</option>
+                </select>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Ürünler buraya yüklenecek -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Cefa Temizlik. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+</body>
+</html>
