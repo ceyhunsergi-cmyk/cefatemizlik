@@ -11,7 +11,7 @@ app.use(express.static('public'));
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+
 
 // Veri dosyaları
 const dataDir = path.join(process.cwd(), 'data');
@@ -180,5 +180,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Cefa Temizlik sunucusu port ${PORT} üzerinde çalışıyor.`);
 });
+
 
 
