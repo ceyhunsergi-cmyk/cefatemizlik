@@ -174,10 +174,8 @@ app.get('/api/password-resets', async (req, res) => {
   res.json(resets);
 });
 
-// Sunucuyu başlat
-initDataFiles().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Cefa Temizlik sunucusu http://localhost:${PORT} adresinde çalışıyor`);
-  });
-});
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Cefa Temizlik sunucusu port ${PORT} üzerinde çalışıyor.`);
+});
