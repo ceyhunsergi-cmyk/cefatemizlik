@@ -14,10 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Veri dosyaları
-const USERS_FILE = path.join(__dirname, 'data', 'users.json');
-const PRODUCTS_FILE = path.join(__dirname, 'data', 'products.json');
-const ORDERS_FILE = path.join(__dirname, 'data', 'orders.json');
-const PASSWORD_RESETS_FILE = path.join(__dirname, 'data', 'passwordResets.json');
+const dataDir = path.join(process.cwd(), 'data');
+const USERS_FILE = path.join(dataDir, 'users.json');
+const PRODUCTS_FILE = path.join(dataDir, 'products.json');
+const ORDERS_FILE = path.join(dataDir, 'orders.json');
+const PASSWORD_RESETS_FILE = path.join(dataDir, 'passwordResets.json');
 
 // Veri dosyalarını başlat
 async function initDataFiles() {
@@ -179,3 +180,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Cefa Temizlik sunucusu port ${PORT} üzerinde çalışıyor.`);
 });
+
