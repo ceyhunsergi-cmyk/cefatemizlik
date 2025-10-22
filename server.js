@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 app.use(express.static('public'));
-const PORT = 3000;
+
 
 // Middleware
 app.use(bodyParser.json());
@@ -180,4 +180,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Cefa Temizlik sunucusu port ${PORT} üzerinde çalışıyor.`);
 });
+
 
