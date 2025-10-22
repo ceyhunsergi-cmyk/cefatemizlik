@@ -5,6 +5,7 @@ const fs = require('fs-extra');
 const path = require('path');
 
 const app = express();
+app.use(express.static('public'));
 const PORT = 3000;
 
 // Middleware
@@ -179,3 +180,4 @@ initDataFiles().then(() => {
     console.log(`Cefa Temizlik sunucusu http://localhost:${PORT} adresinde çalışıyor`);
   });
 });
+
